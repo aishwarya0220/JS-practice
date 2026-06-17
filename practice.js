@@ -165,10 +165,46 @@
 
 
 
-function logAnswer(answer,points) {
-    console.log(`The answer is ${answer}. If you got that right give yourself ${points} points.`)
+// function logAnswer(answer,points) {
+//     console.log(`The answer is ${answer}. If you got that right give yourself ${points} points.`)
+// }
+
+// setTimeout(logAnswer, 3000, "Lima", 10)         // setTimeout
+//                                                 // Can use clearTimeout(embedded to an html button maybe) to cancel the running of the delayed code
+// console.log("What is the capital of Peru?" )
+
+
+
+
+
+
+// import { myCourses as course} from './export.js'        // named export/import
+
+// console.log(course)
+
+
+
+
+
+
+
+// const now = new Date()                   // 'new' bcoz reqd for modern ES6 constructors. legacy constructors work fine w/o them
+
+// console.log(now.getFullYear())                  // date() constructor
+
+
+
+
+
+
+
+function checkUsername(username) {
+    if (username){
+        console.log(username)
+    } else {
+        console.log(new Error("No valid username provided"))        // can substitute throw with console.log but throw 
+    }                                                               // makes code below it redundant
+    
 }
 
-setTimeout(logAnswer, 3000, "Lima", 10)         // setTimeout
-                                                // Can use clearTimeout(embedded to an html button maybe) to cancel the running of the delayed code
-console.log("What is the capital of Peru?" )
+checkUsername()

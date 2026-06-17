@@ -1,0 +1,1 @@
+export const myCourses = ["HTML","CSS","JS","TS"]
