@@ -100,3 +100,75 @@
 
 
 
+// const playerAnswer = 8
+
+// const correctAnswer = 6                         // Ternary operators
+
+// const message = playerAnswer === correctAnswer ? "You guessed right" : playerAnswer > correctAnswer ? "You guessed higher" : "You guessed lower"
+
+// console.log(message)
+
+
+
+
+
+
+
+// function selectItem(item) {
+//     let price = 0
+
+//     switch(item){
+//         case "coffee":
+//             price = 2
+//             break
+
+//         case "sandwiches":
+//             price = 5
+//             break
+//                                                            // switch-case
+//         case "lemonade":
+//             price = 4
+//             break
+        
+//         case "pizza":
+//             price = 8
+//             break
+
+//         default:
+//             return `Sorry, we dont sell ${item}`
+//     }
+
+//     return `You selected ${item}. Pls pay $${price}`
+// }
+
+// console.log(selectItem("cake"))
+
+
+
+
+
+
+
+// const dreamHolidays = {
+//     destination : "Dubai",
+//     activities : "Dirt Biking",
+//     food : "North-Indian",
+//     airways : "Emirates"                        // Object destructuring
+// }
+
+// const {destination,activities,food,airways} = dreamHolidays
+
+// console.log(destination+activities+food+airways)
+
+
+
+
+
+
+function logAnswer(answer,points) {
+    console.log(`The answer is ${answer}. If you got that right give yourself ${points} points.`)
+}
+
+setTimeout(logAnswer, 3000, "Lima", 10)         // setTimeout
+                                                // Can use clearTimeout(embedded to an html button maybe) to cancel the running of the delayed code
+console.log("What is the capital of Peru?" )
