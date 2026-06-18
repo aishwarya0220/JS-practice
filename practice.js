@@ -198,13 +198,55 @@
 
 
 
-function checkUsername(username) {
-    if (username){
-        console.log(username)
-    } else {
-        console.log(new Error("No valid username provided"))        // can substitute throw with console.log but throw 
-    }                                                               // makes code below it redundant
+// function checkUsername(username) {
+//     if (username){
+//         console.log(username)
+//     } else {
+//         console.log(new Error("No valid username provided"))        // can substitute throw with console.log but throw 
+//     }                                                               // makes code below it redundant
     
-}
+// }
 
-checkUsername()
+// checkUsername()
+
+
+
+
+
+
+
+
+// let currentTicket = 0
+
+// function giveTicket() {
+//     return ++currentTicket                  // pre-increment
+// }
+
+// console.log(`Current ticket no: ${giveTicket()}`)
+
+
+
+
+
+
+
+// const Nvidia = BigInt(63_45_32_345)             // bigInt use cases include large numbers used in cryptography or DB
+
+// console.log(typeof Nvidia)
+
+
+
+
+
+
+
+
+// console.log(mashroof())
+
+// function mashroof(){
+//     return "kota me aane se belly fat mila"         // hoisting manifestation
+// }
+
+// console.log(kabeer)                                 // cant access kabeer b4 initializn
+
+// const kabeer = uruguay
