@@ -250,3 +250,33 @@
 // console.log(kabeer)                                 // cant access kabeer b4 initializn
 
 // const kabeer = uruguay
+
+
+
+
+
+
+
+
+// const speedWarning = (driveSpeed, warningSpeed) => {
+//     if (driveSpeed > warningSpeed){
+//         return `Slow down. Your speed is exceeding ${warningSpeed}. No overspeeding`
+//     } else
+//     return `Your speed is ${driveSpeed} `       // arrow function
+// }
+
+// console.log(speedWarning(90,80))
+
+
+
+
+
+
+
+
+function setPermissionLevel(setPermission, ...names) {                             // ...xyz  <-- rest parameter
+    names.forEach((name) => console.log( `${name} now has ${setPermission} level access`))      //(name) => console.log is equivalent to
+}                                                                                               // function(name){ 
+                                                                                                // console.log }
+
+console.log(setPermissionLevel("admin","Kajak","Kafka","blyat"))
