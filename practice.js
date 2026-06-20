@@ -274,9 +274,62 @@
 
 
 
-function setPermissionLevel(setPermission, ...names) {                             // ...xyz  <-- rest parameter
-    names.forEach((name) => console.log( `${name} now has ${setPermission} level access`))      //(name) => console.log is equivalent to
-}                                                                                               // function(name){ 
-                                                                                                // console.log }
+// function setPermissionLevel(setPermission, ...names) {                             // ...xyz  <-- rest parameter
+//     names.forEach((name) => console.log( `${name} now has ${setPermission} level access`))      //(name) => console.log is equivalent to
+// }                                                                                               // function(name){ 
+//                                                                                                 // console.log }
 
-console.log(setPermissionLevel("admin","Kajak","Kafka","blyat"))
+// console.log(setPermissionLevel("admin","Kajak","Kafka","blyat"))
+
+
+
+
+
+
+
+// function greetingEmployees(sender, ...receivers){
+//     return receivers.map((receiver) =>              // if single line then no {} in arrow function
+//        `<p>Dear ${receiver}</p>
+//         <p>Thank you for all your</p>
+//         <p>hardwork throughout</p>
+//         <p>the year!<p>
+//         <p>Best wishes,</p>
+//         <p>${sender}</p>`
+//     ).join("")
+// }
+
+// document.getElementById("labelscontainer").innerHTML = greetingEmployees("Tom","Sally","Mike","Rob","Harriet")
+
+
+
+
+
+
+
+// const num = [10,20,30,30]
+
+// const totalSum = num.reduce((accumulator,currentValue) => {      // array.reduce()
+//     return accumulator + currentValue
+// })
+
+// console.log(totalSum)
+
+
+
+
+
+
+// function display(name = "Baldev") {
+//     return `Hello ${name}`
+// }
+
+// console.log(display("Kanishk"))             // default parameter runs when argument is null 
+
+// console.log(display())
+
+
+
+
+
+
+
