@@ -419,14 +419,130 @@
 
 
 
-const promise = new Promise((resolve,reject)=> {
-    const random = Math.random() > 0.5
-    if(random){
-        resolve("Successful")
-    } else{
-        reject("Failed")
-    }
-})
 
-promise.then(request => console.log(request))
-.catch(response => console.log(response))
+// const promise = new Promise((resolve,reject)=> {
+//     const random = Math.random() > 0.5
+//     if(random){
+//         resolve("Successful")                    // Promise constructor
+//     } else{
+//         reject("Failed")
+//     }
+// })
+
+// promise.then(request => console.log(request))
+// .catch(response => console.log(response))
+
+
+
+
+
+
+
+
+// function preLoadImg(url) {
+//     return new Promise((resolve,reject)=> {
+//         const myImg = new Image()
+//         myImg.src="https://picsum.photos/id/237/200/300"
+//         myImg.alt = "Image of a black dog"
+//         document.body.append()
+//         myImg.addEventListener("load", resolve)
+//         myImg.addEventListener("error", reject)
+//     })
+// }
+
+// preLoadImg().then(receipt => console.log(receipt))
+// .catch(requiem => console.log(requiem))
+
+
+
+
+
+
+
+
+// function uploadFile() {                                  // multiple promises called
+//     return new Promise((resolve,reject)=> {
+//         console.log("Step 1: Uploading file..")
+//         setTimeout(()=> {
+//             resolve()
+//         }, 1000)
+//     })
+// }
+
+// function processFile() {
+//     return new Promise((resolve,reject)=> {
+//         console.log("Step 2: Processing file..")
+//         setTimeout(()=> {
+//             resolve()
+//         }, 1000)
+//     })
+// }
+
+// function notifyUser() {
+//     return new Promise((resolve,reject)=> {
+//         console.log("Step 3: Notifying User..")
+//         setTimeout(()=> {
+//             resolve()
+//         }, 1000)
+//     })
+// }
+
+// try{
+//     await uploadFile()
+//     await processFile()
+//     await notifyUser()
+// }catch(err){
+//     console.log(err)
+// }finally{
+//     console.log("All steps completed")
+// }
+
+
+
+
+
+
+
+
+
+function preLoadImg() {
+    return new Promise((resolve,reject)=> {
+        const myImg = new Image()
+        myImg.src="https://picsum.photos/id/237/200/300"
+        myImg.alt = "Image of a black dog"
+        document.body.append(myImg)
+        myImg.addEventListener("load", resolve)
+        myImg.addEventListener("error", reject)
+    })
+}
+
+function preLoadRandom() {
+    return new Promise((resolve,reject)=> {
+        const myImg = new Image()
+        myImg.src="https://picsum.photos/seed/picsum/200/300"
+        myImg.alt = "img-random"
+        document.body.append(myImg)
+        myImg.addEventListener("load", resolve)
+        myImg.addEventListener("error", reject)
+    })
+}
+
+function preLoadImage() {
+    return new Promise((resolve,reject)=> {
+        const myImg = new Image()
+        myImg.src="https://picum.photos/200/300"
+        myImg.alt = "random-img"
+        document.body.append(myImg)
+        myImg.addEventListener("load", resolve)
+        myImg.addEventListener("error", reject)
+    })
+}
+
+try{
+    const no1 = preLoadImage()
+    const no2 = preLoadImg()
+    const no3 = preLoadRandom()
+    const result = await Promise.all([no1, no2, no3])
+}catch(err){
+    console.log(err)
+}
