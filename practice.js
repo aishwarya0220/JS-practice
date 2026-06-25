@@ -319,6 +319,7 @@
 
 
 
+
 // function display(name = "Baldev") {
 //     return `Hello ${name}`
 // }
@@ -333,3 +334,99 @@
 
 
 
+
+// fetch("https://apis.scrimba.com/bored/api/activity")        // fetching data from api    
+//     .then(response => response.json())                      // .json() for interacting with data previously in json format
+//     .then(data => console.log(data))
+
+
+
+
+
+
+
+
+// async function response(){                  // https://www.geeksforgeeks.org/javascript/synchronous-and-asynchronous-in-javascript/
+//     const response = await fetch("https://apis.scrimba.com/bored/api/activity")
+//     const data = await response.json()      // await is used b4 promise returning exprssn. pauses execution of async f(n) until promise settles
+//     console.log(data)                       // a Promise is an object that represents the eventual result of an asynchronous operation.
+// }
+
+// response()
+
+
+
+
+
+
+
+
+// async function response(){
+//     try{
+//     const response = await fetch("https://jsonplaceholder.typicode.com/invalid-endpoint")   // if scrimba url entered then CORS error - HTTP headers that allow web servers to declare which cross-domain origins are permitted to access their resources
+//     if(!response.ok){                                                                       // API returns JSON data (objects/arrays), which often comes from a database or some backend data source.
+//         throw new Error("Some issue with API")
+//     }                                                            
+//     const data = await response.json()
+//     console.log(data)
+//     } catch(err){
+//         console.log(err)
+//     } finally {
+//         console.log("Operation completed")
+//     }
+// } 
+
+// response()
+
+
+
+
+
+
+
+
+// async function test(){
+//     try{
+//     const response = await fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//         method: 'PUT',                  // GET,POST,PUT,PATCH,DELETE
+//         headers: {
+//             "Content-Type": 'application/json'              // setting server to interpret data we send as json. | use accept : app/json for GET
+//         },
+//         body: JSON.stringify({
+//             title: "cyka blyat",
+//             body: "rush b no stop",
+//             userId: 101
+//         })
+//     })
+//     const data = response.json()
+
+//     if(!response.ok){
+//         throw new Error("Resource Loading issue")
+//     }
+//     console.log(data)
+//     } catch(err){
+//         console.log(err)
+//     } finally{
+//         console.log("Promise operation ended")
+//     }
+// }
+
+// test()
+
+
+
+
+
+
+
+const promise = new Promise((resolve,reject)=> {
+    const random = Math.random() > 0.5
+    if(random){
+        resolve("Successful")
+    } else{
+        reject("Failed")
+    }
+})
+
+promise.then(request => console.log(request))
+.catch(response => console.log(response))
